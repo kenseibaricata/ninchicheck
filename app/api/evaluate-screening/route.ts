@@ -1,10 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import OpenAI from 'openai'
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-})
-
 export async function POST(request: NextRequest) {
   try {
     const { questions, responses, questionsData } = await request.json()
@@ -15,6 +11,29 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       )
     }
+
+    // --- ここからモック対応 ---
+    const apiKey = process.env.OPENAI_API_KEY
+    if (!apiKey) {
+      // モックの診断結果を返す
+      return NextResponse.json({
+        score: 17,
+        maxScore: 21,
+        category: 'mild_concern',
+        summary: '（モック表示）軽度の注意が必要な結果となりました。',
+        recommendations: [
+          '3〜6ヶ月後の再チェックをお勧めします',
+          '規則正しい生活習慣を心がけてください',
+          '気になる症状があれば医師にご相談ください'
+        ],
+        detailedAnalysis: '（モック表示）AIによる診断結果のサンプルです。',
+      })
+    }
+    // --- ここまでモック対応 ---
+
+    const openai = new OpenAI({
+      apiKey
+    })
 
     // OpenAI APIでスクリーニング結果を評価
     const prompt = createEvaluationPrompt(questions, responses, questionsData)
