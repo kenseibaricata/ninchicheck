@@ -44,7 +44,7 @@
   }
 }
 
-html, body, #__next {
+html, body, #__next, .min-h-screen {
   overflow-x: hidden !important;
   width: 100vw;
   max-width: 100vw;
