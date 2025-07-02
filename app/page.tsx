@@ -11,14 +11,14 @@ export default function HomePage() {
         <img
           src="/doctor.jpg"
           alt="医師のイメージ"
-          className="absolute top-0 left-0 right-0 mx-auto w-screen max-w-screen h-auto opacity-30 blur-sm object-cover select-none"
+          className="absolute top-0 left-0 right-0 mx-auto w-full max-w-[100vw] h-auto opacity-30 blur-sm object-contain select-none"
           style={{ zIndex: 1 }}
         />
       </div>
       {/* グラデーションの装飾 */}
-      <div className="absolute inset-0 pointer-events-none z-0 w-screen max-w-screen">
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-br from-blue-300 via-sky-200 to-transparent rounded-full opacity-40 blur-3xl w-screen max-w-screen" />
-        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-gradient-to-tr from-pink-200 via-purple-200 to-transparent rounded-full opacity-30 blur-3xl w-screen max-w-screen" />
+      <div className="absolute inset-0 pointer-events-none z-0 max-w-[100vw]">
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-br from-blue-300 via-sky-200 to-transparent rounded-full opacity-40 blur-3xl max-w-[100vw]" />
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-gradient-to-tr from-pink-200 via-purple-200 to-transparent rounded-full opacity-30 blur-3xl max-w-[100vw]" />
       </div>
 
       {/* ヒーローセクション */}
