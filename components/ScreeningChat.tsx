@@ -90,7 +90,7 @@ export default function ScreeningChat({ onComplete, onConversationUpdate }: Scre
       const welcomeMessage: Message = {
         id: Date.now().toString(),
         type: 'ai',
-        content: 'こんにちは、私はAI医者のDr.アイです。これから認知機能のチェックを始めます。私の質問に音声でお答えください。準備はよろしいですか？',
+        content: 'こんにちは、私はAI医者のAI医師です。これから認知機能のチェックを始めます。私の質問に音声でお答えください。準備はよろしいですか？',
         timestamp: new Date()
       }
       
@@ -177,7 +177,7 @@ export default function ScreeningChat({ onComplete, onConversationUpdate }: Scre
           <Stethoscope className="w-8 h-8 text-primary-700" />
         </div>
         <div>
-          <h2 className="text-xl font-bold">Dr.アイと音声チェック</h2>
+          <h2 className="text-xl font-bold">AI医師と音声チェック</h2>
           <div className="flex items-center gap-2 text-gray-600">
             <Clock className="w-5 h-5" />
             <span className="text-lg font-mono">{formatTime(timeElapsed)}</span>

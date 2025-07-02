@@ -5,20 +5,20 @@ import { Brain, Clock, Shield, Users, Mic, Sparkles } from 'lucide-react'
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-100 via-white to-blue-200 overflow-y-auto">
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-sky-100 via-white to-blue-200 overflow-y-auto overflow-x-hidden">
       {/* 背景画像 doctor.jpg（ヒーローセクション上部・タイトル周辺） */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <img
           src="/doctor.jpg"
           alt="医師のイメージ"
-          className="absolute left-1/2 -translate-x-1/2 -top-10 w-60 md:w-96 h-auto opacity-30 blur-sm object-contain select-none"
+          className="absolute top-0 left-0 right-0 mx-auto w-full max-w-[100vw] h-auto opacity-30 blur-sm object-contain select-none"
           style={{ zIndex: 1 }}
         />
       </div>
       {/* グラデーションの装飾 */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-br from-blue-300 via-sky-200 to-transparent rounded-full opacity-40 blur-3xl" />
-        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-gradient-to-tr from-pink-200 via-purple-200 to-transparent rounded-full opacity-30 blur-3xl" />
+      <div className="absolute inset-0 pointer-events-none z-0 max-w-[100vw]">
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-br from-blue-300 via-sky-200 to-transparent rounded-full opacity-40 blur-3xl max-w-[100vw]" />
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-gradient-to-tr from-pink-200 via-purple-200 to-transparent rounded-full opacity-30 blur-3xl max-w-[100vw]" />
       </div>
 
       {/* ヒーローセクション */}
